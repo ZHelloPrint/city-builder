@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroForge</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/three@0.158.0/build/three.min.js"></script>
+</head>
+
+<body>
+
+    <div id="game">
+
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-icon">M</div>
+                <div>
+                    <div class="brand-name">METROFORGE</div>
+                    <div class="brand-subtitle">CITY SIMULATION</div>
+                </div>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat-label">TREASURY</span>
+                    <span id="money">$50,000</span>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">POPULATION</span>
+                    <span id="population">0</span>
+                </div>
+
+                <div class="stat">
+                    <span class="stat-label">BUILDINGS</span>
+                    <span id="buildings">0</span>
+                </div>
+            </div>
+        </header>
+
+
+        <aside class="left-panel">
+
+            <div class="panel-title">BUILD</div>
+
+            <button class="tool active" data-tool="select">
+                <span class="tool-icon">⌁</span>
+                <span>Select</span>
+            </button>
+
+            <button class="tool" data-tool="road">
+                <span class="tool-icon">╋</span>
+                <span>Road</span>
+            </button>
+
+            <button class="tool" data-tool="residential">
+                <span class="tool-icon">⌂</span>
+                <span>Residential</span>
+            </button>
+
+            <button class="tool" data-tool="commercial">
+                <span class="tool-icon">▦</span>
+                <span>Commercial</span>
+            </button>
+
+            <button class="tool" data-tool="industrial">
+                <span class="tool-icon">▤</span>
+                <span>Industrial</span>
+            </button>
+
+            <div class="panel-divider"></div>
+
+            <button class="tool danger" data-tool="bulldoze">
+                <span class="tool-icon">×</span>
+                <span>Bulldoze</span>
+            </button>
+
+        </aside>
+
+
+        <div class="bottom-panel">
+
+            <div>
+                <div class="selected-title" id="selectedTitle">SELECT TOOL</div>
+                <div class="selected-description" id="selectedDescription">
+                    Click objects to inspect them.
+                </div>
+            </div>
+
+            <div class="controls">
+                <span>LEFT DRAG</span> ROTATE
+                <span>RIGHT DRAG</span> PAN
+                <span>SCROLL</span> ZOOM
+            </div>
+
+        </div>
+
+
+        <div id="notification"></div>
+
+        <div id="crosshair"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
